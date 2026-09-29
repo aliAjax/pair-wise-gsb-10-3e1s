@@ -1,1 +1,24 @@
-{"name":"ccdata-yf-10-topology-editor","private":true,"version":"1.0.0","type":"module","scripts":{"dev":"vite","build":"vite build","preview":"vite preview"},"dependencies":{"@vitejs/plugin-react":"latest","vite":"latest","react":"latest","react-dom":"latest"},"devDependencies":{}}
+{
+  "name": "ccdata-yf-10-topology-editor",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node --test test/topology-model.test.js",
+    "test:ui": "node --import ./test/dom-bootstrap.mjs --test test/app.integration.test.mjs",
+    "test:all": "node --test test/topology-model.test.js && node --import ./test/dom-bootstrap.mjs --test test/app.integration.test.mjs"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "vite": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.0",
+    "jsdom": "^29.0.0"
+  }
+}
